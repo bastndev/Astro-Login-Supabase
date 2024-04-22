@@ -11,7 +11,7 @@ An open source dashboard project using Astro with API endpoints, Tailwind, and S
 npm install
 ```
 
-2. create `.env` important create private `.env.local` 
+2. create environment Variables`.env` important create private `.env.local` 
 ```sh
 SUPABASE_URL=YOUR_SUPABASE_URL
 SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
