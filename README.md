@@ -11,18 +11,6 @@ An open source dashboard project using Astro with API endpoints, Tailwind, and S
 npm install
 ```
 
-1.1. Add this code in `src/env.d.ts`
-```sh
-interface ImportMetaEnv {
-  readonly SUPABASE_URL: string
-  readonly SUPABASE_ANON_KEY: string
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv
-}
-```
-
 2. create `.env` important create private `.env.local` 
 ```sh
 SUPABASE_URL=YOUR_SUPABASE_URL
@@ -36,8 +24,19 @@ SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```
 npm install @supabase/supabase-js
 ```
+4.1. Add this code in `src/env.d.ts`
+```sh
+interface ImportMetaEnv {
+  readonly SUPABASE_URL: string
+  readonly SUPABASE_ANON_KEY: string
+}
 
-5. Create new folder `lib` adn file `supabase.ts` src/lib/supabase.ts
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}
+```
+
+5. Create new folder `/lib` in /src and file `supabase.ts` src/lib/supabase.ts
 ```sh
 import { createClient } from "@supabase/supabase-js";
 
@@ -50,7 +49,7 @@ export const supabase = createClient(
 
 7. add links to `supabase` and `ACTIVE` google and github 
 
-8. Documentation [Astro.js](https://docs.astro.build/en/guides/backend/supabase/)
+8. Code - Documentation [Astro.js](https://docs.astro.build/en/guides/backend/supabase/)
 
 9. add this is code in buttons for `login` and `exit`
 ```
@@ -68,5 +67,7 @@ export const supabase = createClient(
 | TailwindCSS | Styling               | [Docs](https://tailwindcss.com/)                     |
 | React       | Library               | [Docs](https://react.dev/)                           |
 | Supabase    | Database/storage/auth | [Docs](https://supabase.com/)                        |
+| Google      | Google cloud          | [Docs](https://supabase.com/)                        |
+| GitHub      | Github Dev            | [Docs](https://supabase.com/)                        |
 
 [X/Twitter](https://twitter.com/bastndev) - [Linkedin](https://www.linkedin.com/in/bastndev/)
