@@ -43,11 +43,9 @@ export const supabase = createClient(
 ```
 6. Create project in [google cloud](https://cloud.google.com/) and [github dev](https://github.com/bastndev)
 
-7. add links to `supabase` and `ACTIVE` google and github 
+7. Code - Documentation [Astro.js](https://docs.astro.build/en/guides/backend/supabase/)
 
-8. Code - Documentation [Astro.js](https://docs.astro.build/en/guides/backend/supabase/)
-
-9. add this is code in buttons for `login` and `exit`
+8. add this is code in buttons for `login` and `exit`
 ```
   <form action="/api/auth/login" method="post">
 
