@@ -1,5 +1,9 @@
 # Astro Auth + Supabase and React 
 
+<img width="1424" src="public/images/github/screenshot.jpg">
+
+An open source dashboard project using Astro with API endpoints, Tailwind, and Supabase.
+
 > How to add login with Supabase for your project
 
 1. Download the project from `GitHub` and in the terminal type `npm install` 
@@ -48,7 +52,19 @@ export const supabase = createClient(
 
 8. Documentation [Astro.js](https://docs.astro.build/en/guides/backend/supabase/)
 
-9. change 
+9. add this is code in buttons for `login` and `exit`
 ```
   <form action="/api/auth/login" method="post">
+
+  <form action="/api/auth/logout">
 ```
+
+
+## Technology Used
+
+| Technology  | Purpose               | Link                                                 |
+|-------------|-----------------------|------------------------------------------------------|
+| Astro       | Astro Doc Supabase    | [Docs](https://docs.astro.build/en/getting-started/) |
+| TailwindCSS | Styling               | [Docs](https://tailwindcss.com/)                     |
+| React       | Library               | [Docs](https://react.dev/)                           |
+| Supabase    | Database/storage/auth | [Docs](https://supabase.com/)                        |
