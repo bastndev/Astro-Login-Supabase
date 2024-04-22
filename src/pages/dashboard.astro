@@ -1,0 +1,50 @@
+---
+import { Icons } from "../components/Icons";
+import Profile from "../components/Profile.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home page">
+  <div class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div
+      class="container mt-1 sm:mx-auto sm:w-full sm:max-w-[450px] bg-black/5 rounded-lg"
+    >
+      <Profile />
+      <!--  body-->
+      <div class="welcome">
+        <img src="../../public/images/welcome.gif" alt="" />
+      </div>
+      <!-- button Exit "TODO:" /api/auth/logout  -->
+      <button
+        class="button bg-black mt-7 rounded-md p-3.5 cursor-pointer button"
+        type="submit"
+      >
+        <Icons.ArrowLeft className="h-5 mt-1 mr-2" />
+        Log Out
+      </button>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    background-color: rgba(26, 26, 26, 0.098);
+  }
+  .welcome {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    margin: auto;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .button:hover {
+    background-color: rgb(9, 9, 9);
+  }
+</style>
