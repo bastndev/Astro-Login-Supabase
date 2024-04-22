@@ -68,3 +68,5 @@ export const supabase = createClient(
 | TailwindCSS | Styling               | [Docs](https://tailwindcss.com/)                     |
 | React       | Library               | [Docs](https://react.dev/)                           |
 | Supabase    | Database/storage/auth | [Docs](https://supabase.com/)                        |
+
+[X/Twitter](https://twitter.com/bastndev) - [Linkedin](https://www.linkedin.com/in/bastndev/)
