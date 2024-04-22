@@ -2,10 +2,6 @@
 
 <img width="1424" src="public/images/github/screenshot.jpg">
 
-An open source dashboard project using Astro with API endpoints, Tailwind, and Supabase.
-
-> How to add login with Supabase for your project
-
 1. Download the project from `GitHub` and in the terminal type `npm install` 
 ```
 npm install
