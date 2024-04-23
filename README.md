@@ -98,6 +98,38 @@ const picture = data?.user?.user_metadata?.avatar_url;
 ```
 </details>
 
+> [!TIP]
+> Change in: `/pages/api/auth/logout.ts` return redirect("/signin"); to `("/")` or `("/login)`
+
+<details >
+<summary >Add in: (pages/dashboard.astro) </summary>
+
+```
+const { cookies, redirect } = Astro
+const accessToken = cookies.get('sb-access-token')
+const refreshToken = cookies.get('sb-refresh-token')
+
+if (!accessToken && !refreshToken) {
+  return redirect('/login')
+}
+```
+</details>
+
+<details >
+<summary >Add in: (pages/login.astro) </summary>
+
+```
+const { cookies, redirect } = Astro
+
+const accessToken = cookies.get('sb-access-token')
+const refreshToken = cookies.get('sb-refresh-token')
+
+if (accessToken && refreshToken) {
+  return redirect('/dashboard')
+}
+```
+</details>
+
 
 ## Technology Used
 
