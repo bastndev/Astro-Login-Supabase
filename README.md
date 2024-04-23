@@ -53,7 +53,7 @@ export const supabase = createClient(
 ```
 
 > [!IMPORTANT]
-> Change or Add in: `astro.config.mjs` output: 'server',
+> Add or change in: `astro.config.mjs` output: 'server',
 
 ## Technology Used
 
