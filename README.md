@@ -55,6 +55,50 @@ export const supabase = createClient(
 > [!IMPORTANT]
 > Add or change in: `astro.config.mjs` to (output: 'server',)
 
+9. Integrates `Name` and `Email`, `Picture`
+```
+const name = data?.user?.user_metadata?.full_name; 
+const picture = data?.user?.user_metadata?.avatar_url;
+```
+<details >
+<summary >Code example: </summary>
+
+```
+import { Icons } from "../components/Icons";
+import { supabase } from "../lib/supabase";
+
+const { cookies, redirect } = Astro;
+
+const accessToken = cookies.get("sb-access-token");
+const refreshToken = cookies.get("sb-refresh-token");
+
+if (!accessToken || !refreshToken) {
+  return redirect("/login");
+}
+
+const { data, error } = await supabase.auth.setSession({
+  refresh_token: refreshToken.value,
+  access_token: accessToken.value,
+});
+
+if (error) {
+  cookies.delete("sb-access-token", {
+    path: "/",
+  });
+  cookies.delete("sb-refresh-token", {
+    path: "/",
+  });
+
+  return redirect("/login");
+}
+
+const email = data?.user?.email;
+const name = data?.user?.user_metadata?.full_name; 
+const picture = data?.user?.user_metadata?.avatar_url;
+```
+</details>
+
+
 ## Technology Used
 
 | Technology  | Purpose               | Link                                                 |
@@ -63,7 +107,7 @@ export const supabase = createClient(
 | TailwindCSS | Styling               | [Docs](https://tailwindcss.com/)                     |
 | React       | Library               | [Docs](https://react.dev/)                           |
 | Supabase    | Database/storage/auth | [Docs](https://supabase.com/)                        |
-| Google      | Google cloud          | [Docs](https://supabase.com/)                        |
-| GitHub      | Github Dev            | [Docs](https://supabase.com/)                        |
+| Google      | Google cloud          | [Docs](https://cloud.google.com/)                    |
+| GitHub      | Github Dev            | [Docs](https://github.com/bastndev)                  |
 
 [X/Twitter](https://twitter.com/bastndev) - [Linkedin](https://www.linkedin.com/in/bastndev/)
