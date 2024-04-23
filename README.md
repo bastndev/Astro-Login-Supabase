@@ -52,6 +52,8 @@ export const supabase = createClient(
   <form action="/api/auth/logout">
 ```
 
+> [!IMPORTANT]
+> Change or Add in: `astro.config.mjs` output: 'server',
 
 ## Technology Used
 
